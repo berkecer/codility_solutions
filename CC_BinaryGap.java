@@ -21,14 +21,12 @@ class Solution {
         // then find and return the length of longest piece
         int max =  0;
         for (String s : pieces) {
-        	
         	if (s.length()> 2 && s.startsWith("-") && s.endsWith("-")) {
-        		if(s.length() > max) {
+        		if(s.length() - 2 > max) {
         			max = s.length() - 2;
     			}
-			}
-			
-		}
-		return max;
+		}	
 	}
+	return max;
+   }
 }
